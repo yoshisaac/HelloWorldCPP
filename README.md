@@ -1,2 +1,12 @@
-# HelloWorldC
-About HelloWorld C++ is a program with just a bunch of ideas, no real direction or interest. Just for personal learning, or take and edit it.
+# HelloWorld C++
+Basic-ish (currently a mess) console application writen in c++ 
+ 
+It currently has a password that you register to a file, basic calculators that does math with variables, Debug screen, and a Settings menu with an option to change the color of the console.
+
+# Tools to use
+The IDE I used is Code::Blocks, and you can download it at: https://sourceforge.net/projects/codeblocks/
+
+# Other Info
+I use virtual folders for organizing source files, so once you open the project file it should look less like a mess in the IDE. 
+ 
+When you run the program, it will prompt you to register a password. This will create a .txt file in the same folder the program is in, and the program will refer to that text file (if its in the same folder) for the password.
