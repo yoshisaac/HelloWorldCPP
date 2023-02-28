@@ -9,6 +9,13 @@
 
 using namespace std;
 
+void CalcQuitY()
+{
+    cout << "Quitting...";
+    Sleep(1500);
+    exit(0);
+}
+
 void AdditionCalc()
 {
     string CalcQuit;

@@ -7,17 +7,11 @@
 
 #include "Headers\Calc.h"
 #include "Headers\Select.h"
+#include "Headers\MenuBuilder.h"
 
 using namespace std;
 
 string LastCalc;
-
-void CalcQuitY()
-{
-    cout << "Quitting...";
-    Sleep(1500);
-    exit(0);
-}
 
 int main()
 {
@@ -40,23 +34,14 @@ int main()
     {
         while (Read.is_open())
         {
-            while (trys <= 3)
+            while (trys < 3) // 0 1 2
             {
-                //if they failed 3 times then close the application
-                if (trys == 3)
-                {
-                    cout << "Too many guesses! Booting you out.";
-                    Sleep(3500);
-                    exit(0);
-                }
-                else
-                {
-                    // Login screen
-                    system("CLS");
-                    cout << "\n\tInput the password to enter\n\n\n\n" << flush << endl;
-                    cout << "password: ";
-                    cin >> passinput;
-                }
+                // Login screen
+                system("CLS");
+                cout << "\n\tInput the password to enter\n\n\n\n" << flush << endl;
+                cout << "password: ";
+                cin >> passinput;
+                
                 if (passinput == password)
                 {
                     cout << "Correct!";
@@ -73,11 +58,15 @@ int main()
                     trys++;
                 }
             }
+            
+            Read.close();
+            cout << "Too many guesses! Booting you out.";
+            Sleep(3500);
+            exit(0);
         }
 
         cout << "Unable to open password file" << endl;
         Sleep(2000);
-
     }
     else
     {

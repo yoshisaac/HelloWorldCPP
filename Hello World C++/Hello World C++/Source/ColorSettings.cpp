@@ -6,11 +6,11 @@
 
 #include "..\Headers\Calc.h"
 #include "..\Headers\Select.h"
+#include "..\Headers\MenuBuilder.h"
 
 using namespace std;
 
 void CustomColorSetting();
-void FirstScreenColorSettings();
 
 void ColorSettings()
 {
@@ -37,28 +37,31 @@ void ColorSettings()
         {
         case 1:
             Settings();
+            break;
 
         case 2:
             system("color f0");
-            ColorSettings(); //Alright so, why do I call the function here after it sets the color? Well, for some odd reason it will cycle through all the cases once after you select a case, why? Omega help.
+			break; 
 
         case 3:
             system("color f7");
-            ColorSettings();
+            break;
 
         case 4:
             system("color 07");
-            ColorSettings();
+            break;
 
         case 5:
             system("color 08");
-            ColorSettings();
+            break;
 
         case 6:
             CustomColorSetting();
+            break;
 
         default:
             ColorSettings();
+            break;
         }
     }
     return;

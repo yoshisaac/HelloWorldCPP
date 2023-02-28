@@ -1,3 +1,4 @@
+#pragma once
 #ifndef CALC_H_INCLUDE
 #define CALC_H_INCLUDE
 

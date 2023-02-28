@@ -135,8 +135,6 @@
     <ClCompile Include="Source\CustomColorSetting.cpp" />
     <ClCompile Include="Source\DebugWindow.cpp" />
     <ClCompile Include="Source\DivisionCalc.cpp" />
-    <ClCompile Include="Source\Navigation\AlgebraSelectScreen.cpp" />
-    <ClCompile Include="Source\Navigation\StandardSelectScreen.cpp" />
     <ClCompile Include="Source\SubtractionCalc.cpp" />
     <ClCompile Include="Source\StandardSelectScreen.cpp" />
     <ClCompile Include="Source\SettingsWindow.cpp" />
@@ -145,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\Calc.h" />
+    <ClInclude Include="Headers\MenuBuilder.h" />
     <ClInclude Include="Headers\Select.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
