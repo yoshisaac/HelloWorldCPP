@@ -14,7 +14,7 @@ string LastCalc;
 
 /*
 Since this is only used once in line #57 there is no use for it to be its own function
-Also something should only be a function if it is being use repetitivly or it is a large block of code
+Also something should only be a function if it is being used repetitivly or it is a large block of code
 ~ Omega
 */
 void TooManyPswrdFails()
