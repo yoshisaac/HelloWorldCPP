@@ -12,19 +12,7 @@ using namespace std;
 
 string LastCalc;
 
-/*
-Since this is only used once in line #57 there is no use for it to be its own function
-Also something should only be a function if it is being used repetitivly or it is a large block of code
-~ Omega
-*/
-void TooManyPswrdFails()
-{
-    cout << "Too many guesses! Booting you out.";
-    Sleep(3500);
-    exit(0);
-}
-
-void CalcQuitY() // Put this function definition in a header file ~ Omega
+void CalcQuitY()
 {
     cout << "Quitting...";
     Sleep(1500);
@@ -36,8 +24,6 @@ int main()
     //the "trys" variable tracks how many times they failed to input the password
     int trys = 0;
     string CalcQuit;
-
-    //string password = "HelloWorld"; // Whis is this here is it still needed? ~ Omega
 
     LastCalc = "None";
 
@@ -59,7 +45,9 @@ int main()
                 //if they failed 3 times then close the application
                 if (trys == 3)
                 {
-                    TooManyPswrdFails();
+                    cout << "Too many guesses! Booting you out.";
+                    Sleep(3500);
+                    exit(0);
                 }
                 else
                 {
@@ -81,7 +69,7 @@ int main()
                 {
                     cout << "Wrong!" << endl;
                     Sleep(1500);
-                    //add 1 to the intiger every time they fail the password
+                    //add 1 to the integer every time they fail the password
                     trys++;
                 }
             }
@@ -109,6 +97,7 @@ int main()
 
         cout << endl;
         cout << "Password saved to 'password.txt'" << endl;
+        Sleep(3000);
 
         main();
     }

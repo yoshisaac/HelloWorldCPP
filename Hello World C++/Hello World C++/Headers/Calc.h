@@ -10,6 +10,8 @@ void MultiplicationCalc();
 
 void AxByCalc();
 
+void CalcQuitY();
+
 extern double A, B;
 extern double x, y;
 extern double answr;

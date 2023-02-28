@@ -16,124 +16,8 @@ bool AxByActiv;
 
 string CalcQuit;
 
-void CalcQuitY();
-
 void AB();
 void XY();
-
-// Since this is not being used maybe you could remove it ~ Omega
-/*
-void XY()
-{
-    while (true == true)
-    {
-        system("CLS");
-        cout << "Known A: " << A << endl;
-        cout << "Known B: " << B << endl << endl;
-        cout << "Variable X: ";
-        cin >> x;
-        cout << endl;
-        cout << "Variable Y: ";
-        cin >> y;
-        answr = A*x + B*y;
-        cout << "\t\t\t\t\t " << answr << endl;
-        sleep(1);
-        cout << "Return? Y or N" << endl;
-        cout << "Or type 'quit' to close the application" << endl;
-        cout << "Or type 'XY' to recalculate your X and Y again." << endl;
-        cin >> CalcQuit;
-            if (CalcQuit == "XY")
-            {
-                XY();
-            }
-            else if (CalcQuit == "Y")
-            {
-                AxByActiv = 0;
-                AlgebraSelectScreen();
-            }
-            else if (CalcQuit == "y")
-            {
-                AxByActiv = 0;
-                AlgebraSelectScreen();
-            }
-            else if (CalcQuit == "quit")
-            {
-                CalcQuitY();
-            }
-            else if (CalcQuit == "Quit")
-            {
-                CalcQuitY();
-            }
-    }
-}
-void AB()
-{
-    while (true == true)
-    {
-        system("CLS");
-        cout << "Known A: ";
-        cin >> A;
-        cout << endl;
-        cout << "Known B: ";
-        cin >> B;
-        cout << "\n\n\n" << endl;
-        cout << "Variable X: ";
-        cin >> x;
-        cout << endl;
-        cout << "Variable Y: ";
-        cin >> y;
-        answr = A*x + B*y;
-        cout << "\t\t\t\t\t " << answr << endl;
-        sleep(1);
-        cout << "Return? Y or N" << endl;
-        cout << "Or type 'quit' to close the application" << endl;
-        cout << "Or type 'XY' to recalculate your X and Y again." << endl;
-        cin >> CalcQuit;
-            if (CalcQuit == "XY")
-            {
-                XY();
-            }
-            else if (CalcQuit == "AB")
-            {
-                AB();
-            }
-            else if (CalcQuit == "Y")
-            {
-                AxByActiv = 0;
-                AlgebraSelectScreen();
-            }
-            else if (CalcQuit == "y")
-            {
-                AxByActiv = 0;
-                AlgebraSelectScreen();
-            }
-            else if (CalcQuit == "quit")
-            {
-                CalcQuitY();
-            }
-            else if (CalcQuit == "Quit")
-            {
-                CalcQuitY();
-            }
-    }
-}
-*/
-
-void Calculate()
-{
-    cout << "Variable X: ";
-    cin >> x;
-
-    cout << endl;
-
-    cout << "Variable Y: ";
-    cin >> y;
-
-    answr = A * x + B * y;
-	cout << "\t\t\t\t\t " << answr << endl; // Thats a lot of tabs :p ~ Omega
-    Sleep(1);
-    return;
-}
 
 void AxByCalc()
 {
@@ -142,10 +26,10 @@ void AxByCalc()
     LastCalc = "Ax+By=C";
 
     /* Ok here is the Ax+By=C calculator */
-    while (AxByActiv == 1)
+    while (AxByActiv)
     {
         system("CLS");
-		cout << "\n\tAlgebra: Ax+By=C calculator\n\n\n\n" << flush << endl; // since you already have /n at the end you dont need the endl, also I think the flush here is doing nothing ~ Omega
+		cout << "\n\tAlgebra: Ax+By=C calculator\n\n\n\n" << endl;
 
         cout << "Known A: ";
         cin >> A;
@@ -157,7 +41,17 @@ void AxByCalc()
 
         cout << "\n\n\n" << endl;
 
-        Calculate();
+        cout << "Variable X: ";
+        cin >> x;
+
+        cout << endl;
+
+        cout << "Variable Y: ";
+        cin >> y;
+
+        answr = A * x + B * y;
+        cout << "\n\t\tYour answer is: " << answr << endl;
+        Sleep(2000);
 
         cout << endl;
 
@@ -167,42 +61,20 @@ void AxByCalc()
         cout << "Or type 'AB' to recalculate your A and B" << endl;
         cin >> CalcQuit;
 
-        /*
-        You should use the || operator here instead of having multiple if statements
-        Example: if (CalcQuit == "Y" || CalcQuit == "y")
-        ~ Omega
-        */
-        if (CalcQuit == "XY")
+        if (CalcQuit == "XY" || CalcQuit == "xy")
         {
             XY();
         }
-        else if (CalcQuit == "xy")
-        {
-            XY();
-        }
-        else if (CalcQuit == "AB")
+        else if (CalcQuit == "AB" || CalcQuit == "ab")
         {
             AB();
         }
-        else if (CalcQuit == "ab")
-        {
-            AB();
-        }
-        else if (CalcQuit == "Y")
+        else if (CalcQuit == "Y" || CalcQuit == "y")
         {
             AxByActiv = 0;
             AlgebraSelectScreen();
         }
-        else if (CalcQuit == "y")
-        {
-            AxByActiv = 0;
-            AlgebraSelectScreen();
-        }
-        else if (CalcQuit == "quit")
-        {
-            CalcQuitY();
-        }
-        else if (CalcQuit == "Quit")
+        else if (CalcQuit == "quit" || CalcQuit == "Quit")
         {
             CalcQuitY();
         }
@@ -214,4 +86,8 @@ void AxByCalc()
 
     }
     return;
+}
+
+void CalcQuity()
+{
 }

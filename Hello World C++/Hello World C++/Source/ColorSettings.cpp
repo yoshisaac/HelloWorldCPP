@@ -29,37 +29,35 @@ void ColorSettings()
         cout << "6: Custom color" << endl;
         cout << endl << endl;
 
-        string opton;
+        int opton;
         cout << "Option: ";
         cin >> opton;
 
-		// since you are only doing int comparisons you should use a switch statement like in AlgebraSelectScreen ~ Omega
-        if (opton == "1")
+        switch (opton)
         {
+        case 1:
             Settings();
-        }
-        else if (opton == "2")
-        {
+
+        case 2:
             system("color f0");
-        }
-        else if (opton == "3")
-        {
+            ColorSettings(); //Alright so, why do I call the function here after it sets the color? Well, for some odd reason it will cycle through all the cases once after you select a case, why? Omega help.
+
+        case 3:
             system("color f7");
-        }
-        else if (opton == "4")
-        {
+            ColorSettings();
+
+        case 4:
             system("color 07");
-        }
-        else if (opton == "5")
-        {
+            ColorSettings();
+
+        case 5:
             system("color 08");
-        }
-        else if (opton == "6")
-        {
-            FirstScreenColorSettings();
-        }
-        else
-        {
+            ColorSettings();
+
+        case 6:
+            CustomColorSetting();
+
+        default:
             ColorSettings();
         }
     }

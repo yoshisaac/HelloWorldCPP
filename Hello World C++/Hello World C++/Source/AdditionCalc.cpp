@@ -9,22 +9,19 @@
 
 using namespace std;
 
-void CalcQuitY();
-
 void AdditionCalc()
 {
     string CalcQuit;
     double fst, scnd;
-    double answr;
 
-	AdditionActiv = 1; // Since the only value this variable is used for is to check if the calculator is active or not you should make it a bool ~ Omega
+	AdditionActiv = 1;
     LastCalc = "Addition";
 
     /* Ok here is the addition calculator */
-	while (AdditionActiv == 1) // If this is made a bool then this should be while (AdditionActiv) ~ Omega
+	while (AdditionActiv)
     {
         system("CLS");
-        cout << "\n\tThis is the c++ two value addition calculator\n\n\n\n" << flush << endl;
+        cout << "\n\tThis is the c++ two value addition calculator\n\n\n\n" << endl;
 
         cout << "value one: ";
         cin >> fst;
@@ -36,35 +33,20 @@ void AdditionCalc()
 
         cout << "\n\n\n" << endl;
 
-        answr = fst + scnd;
-        cout << "\t\tYour answer is: " << answr << endl;
-        Sleep(1);
+        cout << "\t\tYour answer is: " << fst + scnd << endl;
+        Sleep(2000);
 
         cout << "Exit? Y or N" << endl;
         cout << "Or type 'quit' to close the application\n" << endl;
         cin >> CalcQuit;
 
 
-        /*
-		You should use the || operator here instead of having multiple if statements
-		Example: if (CalcQuit == "Y" || CalcQuit == "y")
-		~ Omega
-        */
-        if (CalcQuit == "Y")
+        if (CalcQuit == "Y" || CalcQuit == "y")
         {
             AdditionActiv = 0;
             SelectScreen();
         }
-        else if (CalcQuit == "y")
-        {
-            AdditionActiv = 0;
-            SelectScreen();
-        }
-        else if (CalcQuit == "quit")
-        {
-            CalcQuitY();
-        }
-        else if (CalcQuit == "Quit")
+        else if (CalcQuit == "quit" || CalcQuit == "Quit")
         {
             CalcQuitY();
         }

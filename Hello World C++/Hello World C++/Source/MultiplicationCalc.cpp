@@ -9,19 +9,16 @@
 
 using namespace std;
 
-void CalcQuitY();
-
 void MultiplicationCalc()
 {
     string CalcQuit;
     double fst, scnd;
-    double answr;
 
     MultiplicationActiv = 1;
     LastCalc = "Multiplication";
 
     /* Ok here is the multiplication calculator */
-    while (MultiplicationActiv == 1)
+    while (MultiplicationActiv)
     {
         system("CLS");
         cout << "\n\tThis is the c++ two value multiplication calculator\n\n\n\n" << flush << endl;
@@ -37,31 +34,19 @@ void MultiplicationCalc()
 
         cout << "\n\n\n" << endl;
 
-		// Same as in division calculator this could be on one line ~ Omega
-        answr = fst * scnd;
-        cout << "\t\tYour answer is: " << answr << endl;
+        cout << "\t\tYour answer is: " << fst * scnd << endl;
         
-        Sleep(1);
+        Sleep(1000);
         cout << "Exit? Y or N" << endl;
         cout << "Or type 'quit' to close the application\n" << endl;
         cin >> CalcQuit;
 
-		// Yada yada yada, this can be made smaller ~ Omega
-        if (CalcQuit == "Y")
+        if (CalcQuit == "Y" || CalcQuit == "y")
         {
             MultiplicationActiv = 0;
             SelectScreen();
         }
-        else if (CalcQuit == "y")
-        {
-            MultiplicationActiv = 0;
-            SelectScreen();
-        }
-        else if (CalcQuit == "quit")
-        {
-            CalcQuitY();
-        }
-        else if (CalcQuit == "Quit")
+        else if (CalcQuit == "quit" || CalcQuit == "Quit")
         {
             CalcQuitY();
         }
@@ -70,7 +55,6 @@ void MultiplicationCalc()
             MultiplicationActiv = 0;
             SelectScreen();
         }
-
         system("CLS");
     }
     return;

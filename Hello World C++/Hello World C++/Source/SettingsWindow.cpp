@@ -21,21 +21,19 @@ void Settings()
         cout << "2: Console color" << endl;
         cout << endl << endl;
 
-        string opton;
+        int opton;
         cout << "Option: ";
         cin >> opton;
-        
-		// switch statement? Since the input should be a number ~ Omega
-        if (opton == "1")
+
+        switch (opton)
         {
+        case 1:
             SelectScreen();
-        }
-        else if (opton == "2")
-        {
+
+        case 2:
             ColorSettings();
-        }
-        else
-        {
+
+        default:
             Settings();
         }
     }

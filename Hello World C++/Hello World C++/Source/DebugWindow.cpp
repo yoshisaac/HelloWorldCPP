@@ -32,6 +32,7 @@ void DebugWindow()
 
 
     system("pause");
+    SelectScreen();
 
     return;
 }

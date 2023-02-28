@@ -31,7 +31,7 @@ void XY()
 
     answr = A * x + B * y;
     cout << "\t\t\t\t\t " << answr << endl;
-    Sleep(1);
+    Sleep(1000);
 
     cout << "Return? Y or N" << endl;
     cout << "Or type 'quit' to close the application" << endl;
@@ -39,42 +39,20 @@ void XY()
     cout << "Or type 'AB' to recalculate your A and B" << endl;
     cin >> CalcQuit;
 
-    /*
-    You should use the || operator here instead of having multiple if statements
-    Example: if (CalcQuit == "Y" || CalcQuit == "y")
-    ~ Omega
-    */
-    if (CalcQuit == "XY")
+    if (CalcQuit == "XY" || CalcQuit == "xy")
     {
         XY();
     }
-    else if (CalcQuit == "xy")
-    {
-        XY();
-    }
-    else if (CalcQuit == "AB")
+    else if (CalcQuit == "AB" || CalcQuit == "ab")
     {
         AB();
     }
-    else if (CalcQuit == "ab")
-    {
-        AB();
-    }
-    else if (CalcQuit == "Y")
+    else if (CalcQuit == "Y" || CalcQuit == "y")
     {
         AxByActiv = 0;
         AlgebraSelectScreen();
     }
-    else if (CalcQuit == "y")
-    {
-        AxByActiv = 0;
-        AlgebraSelectScreen();
-    }
-    else if (CalcQuit == "quit")
-    {
-        CalcQuitY();
-    }
-    else if (CalcQuit == "Quit")
+    else if (CalcQuit == "quit" || CalcQuit == "Quit")
     {
         CalcQuitY();
     }
@@ -108,7 +86,7 @@ void AB()
 
     answr = A * x + B * y;
     cout << "\t\t\t\t\t " << answr << endl;
-    Sleep(1);
+    Sleep(1000);
 
     cout << "Return? Y or N" << endl;
     cout << "Or type 'quit' to close the application" << endl;
@@ -116,42 +94,20 @@ void AB()
     cout << "Or type 'AB' to recalculate your A and B" << endl;
     cin >> CalcQuit;
 
-    /*
-    You should use the || operator here instead of having multiple if statements
-    Example: if (CalcQuit == "Y" || CalcQuit == "y")
-    ~ Omega
-    */
-    if (CalcQuit == "XY")
+    if (CalcQuit == "XY" || CalcQuit == "xy")
     {
         XY();
     }
-    else if (CalcQuit == "xy")
-    {
-        XY();
-    }
-    else if (CalcQuit == "AB")
+    else if (CalcQuit == "AB" || CalcQuit == "ab")
     {
         AB();
     }
-    else if (CalcQuit == "ab")
-    {
-        AB();
-    }
-    else if (CalcQuit == "Y")
+    else if (CalcQuit == "Y" || CalcQuit == "y")
     {
         AxByActiv = 0;
         AlgebraSelectScreen();
     }
-    else if (CalcQuit == "y")
-    {
-        AxByActiv = 0;
-        AlgebraSelectScreen();
-    }
-    else if (CalcQuit == "quit")
-    {
-        CalcQuitY();
-    }
-    else if (CalcQuit == "Quit")
+    else if (CalcQuit == "quit" || CalcQuit == "Quit")
     {
         CalcQuitY();
     }

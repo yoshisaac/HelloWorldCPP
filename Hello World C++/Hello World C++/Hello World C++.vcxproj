@@ -135,6 +135,8 @@
     <ClCompile Include="Source\CustomColorSetting.cpp" />
     <ClCompile Include="Source\DebugWindow.cpp" />
     <ClCompile Include="Source\DivisionCalc.cpp" />
+    <ClCompile Include="Source\Navigation\AlgebraSelectScreen.cpp" />
+    <ClCompile Include="Source\Navigation\StandardSelectScreen.cpp" />
     <ClCompile Include="Source\SubtractionCalc.cpp" />
     <ClCompile Include="Source\StandardSelectScreen.cpp" />
     <ClCompile Include="Source\SettingsWindow.cpp" />

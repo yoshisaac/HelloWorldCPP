@@ -9,19 +9,16 @@
 
 using namespace std;
 
-void CalcQuitY();
-
 void SubtractionCalc()
 {
     string CalcQuit;
     double fst, scnd;
-    double answr;
 
     SubtractionActiv = 1;
     LastCalc = "Subtraction";
 
     /* Ok here is the subtraction calculator */
-    while (SubtractionActiv == 1)
+    while (SubtractionActiv)
     {
         system("CLS");
         cout << "\n\tThis is the c++ two value subtract calculator\n\n\n\n" << flush << endl;
@@ -37,31 +34,19 @@ void SubtractionCalc()
 
         cout << "\n\n\n" << endl;
 
-		// Same as in division calculator this could be on one line ~ Omega
-        answr = fst - scnd;
-        cout << "\t\tYour answer is: " << answr << endl;
+        cout << "\t\tYour answer is: " << fst - scnd << endl;
         
-        Sleep(1);
+        Sleep(1000);
         cout << "Exit? Y or N" << endl;
         cout << "Or type 'quit' to close the application\n" << endl;
         cin >> CalcQuit;
 
-		// And again this could be simplified ~ Omega
-        if (CalcQuit == "Y")
+        if (CalcQuit == "Y" || CalcQuit == "y")
         {
             SubtractionActiv = 0;
             SelectScreen();
         }
-        else if (CalcQuit == "y")
-        {
-            SubtractionActiv = 0;
-            SelectScreen();
-        }
-        else if (CalcQuit == "quit")
-        {
-            CalcQuitY();
-        }
-        else if (CalcQuit == "Quit")
+        else if (CalcQuit == "quit" || CalcQuit == "Quit")
         {
             CalcQuitY();
         }
@@ -70,7 +55,6 @@ void SubtractionCalc()
             SubtractionActiv = 0;
             SelectScreen();
         }
-
         system("CLS");
     }
     return;
