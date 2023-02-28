@@ -94,7 +94,7 @@ int main()
     else
     {
         /*
-		Maybe you could try hashing the password so and comparing the hash instead its easier for the computer to compate and a more secure way of storing passwords
+		Maybe you could try hashing the password so and comparing the hash instead its easier for the computer to compute and a more secure way of storing passwords
         Plus you would learn something new :p
         ~ Omega
         */
