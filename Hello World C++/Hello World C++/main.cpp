@@ -12,6 +12,11 @@ using namespace std;
 
 string LastCalc;
 
+/*
+Since this is only used once in line #57 there is no use for it to be its own function
+Also something should only be a function if it is being use repetitivly or it is a large block of code
+~ Omega
+*/
 void TooManyPswrdFails()
 {
     cout << "Too many guesses! Booting you out.";
@@ -19,7 +24,7 @@ void TooManyPswrdFails()
     exit(0);
 }
 
-void CalcQuitY()
+void CalcQuitY() // Put this function definition in a header file ~ Omega
 {
     cout << "Quitting...";
     Sleep(1500);
@@ -32,7 +37,7 @@ int main()
     int trys = 0;
     string CalcQuit;
 
-    //string password = "HelloWorld";
+    //string password = "HelloWorld"; // Whis is this here is it still needed? ~ Omega
 
     LastCalc = "None";
 
@@ -88,6 +93,11 @@ int main()
     }
     else
     {
+        /*
+		Maybe you could try hashing the password so and comparing the hash instead its easier for the computer to compate and a more secure way of storing passwords
+        Plus you would learn something new :p
+        ~ Omega
+        */
         ofstream Create;
         Create.open("password.txt");
         cout << "\n\tRegister a password" << endl;

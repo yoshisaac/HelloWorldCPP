@@ -37,14 +37,16 @@ void SubtractionCalc()
 
         cout << "\n\n\n" << endl;
 
+		// Same as in division calculator this could be on one line ~ Omega
         answr = fst - scnd;
         cout << "\t\tYour answer is: " << answr << endl;
+        
         Sleep(1);
-
         cout << "Exit? Y or N" << endl;
         cout << "Or type 'quit' to close the application\n" << endl;
         cin >> CalcQuit;
 
+		// And again this could be simplified ~ Omega
         if (CalcQuit == "Y")
         {
             SubtractionActiv = 0;

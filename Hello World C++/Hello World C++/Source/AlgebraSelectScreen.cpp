@@ -24,7 +24,7 @@ void AlgebraSelectScreen()
     cout << "Option: ";
     cin >> opton;
 
-    switch (opton)
+	switch (opton) // Nice use of a switch statement good job :thumbs_up: ~ Omega
     {
     case 1:
         cout << "Booting you out.";

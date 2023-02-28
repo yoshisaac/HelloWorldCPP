@@ -21,6 +21,7 @@ void CalcQuitY();
 void AB();
 void XY();
 
+// Since this is not being used maybe you could remove it ~ Omega
 /*
 void XY()
 {
@@ -129,7 +130,7 @@ void Calculate()
     cin >> y;
 
     answr = A * x + B * y;
-    cout << "\t\t\t\t\t " << answr << endl;
+	cout << "\t\t\t\t\t " << answr << endl; // Thats a lot of tabs :p ~ Omega
     Sleep(1);
     return;
 }
@@ -144,7 +145,7 @@ void AxByCalc()
     while (AxByActiv == 1)
     {
         system("CLS");
-        cout << "\n\tAlgebra: Ax+By=C calculator\n\n\n\n" << flush << endl;
+		cout << "\n\tAlgebra: Ax+By=C calculator\n\n\n\n" << flush << endl; // since you already have /n at the end you dont need the endl, also I think the flush here is doing nothing ~ Omega
 
         cout << "Known A: ";
         cin >> A;
@@ -166,7 +167,11 @@ void AxByCalc()
         cout << "Or type 'AB' to recalculate your A and B" << endl;
         cin >> CalcQuit;
 
-
+        /*
+        You should use the || operator here instead of having multiple if statements
+        Example: if (CalcQuit == "Y" || CalcQuit == "y")
+        ~ Omega
+        */
         if (CalcQuit == "XY")
         {
             XY();

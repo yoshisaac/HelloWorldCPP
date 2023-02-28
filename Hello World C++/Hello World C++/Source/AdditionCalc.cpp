@@ -17,15 +17,14 @@ void AdditionCalc()
     double fst, scnd;
     double answr;
 
-    AdditionActiv = 1;
+	AdditionActiv = 1; // Since the only value this variable is used for is to check if the calculator is active or not you should make it a bool ~ Omega
     LastCalc = "Addition";
 
     /* Ok here is the addition calculator */
-    while (AdditionActiv == 1)
+	while (AdditionActiv == 1) // If this is made a bool then this should be while (AdditionActiv) ~ Omega
     {
         system("CLS");
         cout << "\n\tThis is the c++ two value addition calculator\n\n\n\n" << flush << endl;
-
 
         cout << "value one: ";
         cin >> fst;
@@ -45,6 +44,12 @@ void AdditionCalc()
         cout << "Or type 'quit' to close the application\n" << endl;
         cin >> CalcQuit;
 
+
+        /*
+		You should use the || operator here instead of having multiple if statements
+		Example: if (CalcQuit == "Y" || CalcQuit == "y")
+		~ Omega
+        */
         if (CalcQuit == "Y")
         {
             AdditionActiv = 0;

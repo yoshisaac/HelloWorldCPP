@@ -37,14 +37,16 @@ void MultiplicationCalc()
 
         cout << "\n\n\n" << endl;
 
+		// Same as in division calculator this could be on one line ~ Omega
         answr = fst * scnd;
         cout << "\t\tYour answer is: " << answr << endl;
+        
         Sleep(1);
-
         cout << "Exit? Y or N" << endl;
         cout << "Or type 'quit' to close the application\n" << endl;
         cin >> CalcQuit;
 
+		// Yada yada yada, this can be made smaller ~ Omega
         if (CalcQuit == "Y")
         {
             MultiplicationActiv = 0;

@@ -34,6 +34,7 @@ void SelectScreen()
     cout << "Option: ";
     cin >> opton;
 
+	// Another good use of a switch statement ~ Omega
     switch (opton)
     {
     case 1:

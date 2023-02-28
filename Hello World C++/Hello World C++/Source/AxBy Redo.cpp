@@ -39,7 +39,11 @@ void XY()
     cout << "Or type 'AB' to recalculate your A and B" << endl;
     cin >> CalcQuit;
 
-
+    /*
+    You should use the || operator here instead of having multiple if statements
+    Example: if (CalcQuit == "Y" || CalcQuit == "y")
+    ~ Omega
+    */
     if (CalcQuit == "XY")
     {
         XY();
@@ -112,7 +116,11 @@ void AB()
     cout << "Or type 'AB' to recalculate your A and B" << endl;
     cin >> CalcQuit;
 
-
+    /*
+    You should use the || operator here instead of having multiple if statements
+    Example: if (CalcQuit == "Y" || CalcQuit == "y")
+    ~ Omega
+    */
     if (CalcQuit == "XY")
     {
         XY();

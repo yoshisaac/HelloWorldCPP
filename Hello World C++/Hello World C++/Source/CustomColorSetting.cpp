@@ -18,7 +18,7 @@ void CustomColorSetting();
 
 void ColorInputCheck()
 {
-	// Fixed by Omega172
+	// I had to fix this function because the old one was wack but I bet it can still be improved ~ Omega
     char fsthalf = opton[0];
     char scndhalf = opton[1];
 
@@ -53,7 +53,9 @@ void FirstScreenColorSettings()
     cout << endl;
     cout << "note: You can't put the same color twice." << endl;
     cout << "example: You cant have 00 or FF for black on black or white on white" << endl;
-    //This is just a restriction that microsoft themself added. I can't do anything about it, but that restriction also prevents the console from being unusuable if you cant see the text, so I like it.
+    // This is just a restriction that microsoft themself added. I can't do anything about it, but that restriction also prevents the console from being unusuable if you cant see the text, so I like it.
+	// Maybe let the user know this ^ ~ Omega
+
     cout << endl;
     system("pause");
     CustomColorSetting();
@@ -82,6 +84,8 @@ void CustomColorSetting()
         cout << "note: You can't put the same color twice." << endl;
         cout << "example: You cant have 00 or FF for black on black or white on white" << endl;
         //This is just a restriction that microsoft themself added. I can't do anything about it, but that restriction also prevents the console from being unusuable if you cant see the text, so I like it.
+		 // Maybe since you have this menu in two places, you could make a function for it and call it in both places? ~ Omega
+
         cout << endl;
 
         cout << endl;
@@ -129,6 +133,15 @@ void CustomColorSetting()
                 //The "system" function built into c++ only accepts chars.
                 system(char_array);
             }
+
+            /*
+			did you know instead of converting the string to a char array, you can just use the string directly?
+			std::string.c_str():
+			https://www.cplusplus.com/reference/string/string/c_str/
+
+			std::string example = "echo Hello World";
+			system(example.c_str());
+            */
         }
     }
     return;

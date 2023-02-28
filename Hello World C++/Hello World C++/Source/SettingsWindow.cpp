@@ -24,7 +24,8 @@ void Settings()
         string opton;
         cout << "Option: ";
         cin >> opton;
-
+        
+		// switch statement? Since the input should be a number ~ Omega
         if (opton == "1")
         {
             SelectScreen();

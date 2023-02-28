@@ -33,6 +33,7 @@ void ColorSettings()
         cout << "Option: ";
         cin >> opton;
 
+		// since you are only doing int comparisons you should use a switch statement like in AlgebraSelectScreen ~ Omega
         if (opton == "1")
         {
             Settings();
