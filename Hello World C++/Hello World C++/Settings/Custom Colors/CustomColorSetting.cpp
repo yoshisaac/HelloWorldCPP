@@ -6,37 +6,37 @@
 #include <windows.h>
 #include <vector>
 
-#include "..\Headers\Calc.h"
-#include "..\Headers\Select.h"
+#include "..\..\Headers\Calc.h"
+#include "..\..\Headers\Select.h"
 
 using namespace std;
 
 string opton;
-bool good;
+bool good = false;
 
 void CustomColorSetting();
 
 void ColorInputCheck()
 {
 	// I had to fix this function because the old one was wack (:V woah crazy) but I bet it can still be improved ~ Omega
-    char fsthalf = opton[0];
-    char scndhalf = opton[1];
+    char fsthalf = tolower(opton[0]);
+    char scndhalf = tolower(opton[1]);
 
-    vector<char> valid = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'A', 'B', 'C', 'D', 'E', 'F' };
+    vector<char> valid = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', };
 
 	bool firsthalf = (find(valid.begin(), valid.end(), fsthalf) != valid.end());
     bool secondhalf = (find(valid.begin(), valid.end(), scndhalf) != valid.end());
 
     if (firsthalf && secondhalf == 1)
     {
-        good = 1;
+        good = true;
     }
 }
 
 void CustomColorSetting()
 {
 
-    while (true == true)
+    while (true)
     {
         system("CLS");
         cout << "\n\tCustom Console Color" << endl;
@@ -57,13 +57,9 @@ void CustomColorSetting()
         cout << "example: You cant have 00 or FF for black on black or white on white, which would make everything unreadable." << endl;
         //This is just a restriction that microsoft themself added. I can't do anything about it, but that restriction also prevents the console from being unusuable if you cant see the text, so I like it.
 
-        cout << endl;
-
-        cout << endl;
+        cout << endl << endl;
 
         cin >> opton;
-
-        good = 0;
 
         string finalopton;
         finalopton = "color " + opton;
@@ -80,13 +76,14 @@ void CustomColorSetting()
         }
         else
         {
-
             ColorInputCheck();
 
-            if (good == 1)
+            if (good == true)
             {
                 //The "system" function built into c++ only accepts chars.
                 system(finalopton.c_str());
+                ColorSettingFile = finalopton;
+                ColorWriteToFile();
             }
         }
     }

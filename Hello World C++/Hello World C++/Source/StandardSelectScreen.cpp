@@ -8,16 +8,11 @@
 #include "..\Headers\Calc.h"
 #include "..\Headers\MenuBuilder.h"
 
-bool AdditionActiv;
-bool SubtractionActiv;
-bool DivisionActiv;
-bool MultiplicationActiv;
-
-// Updated to new menu builder framework by Omega
+// Changed to a different menu builder framework made by Omega
 
 void Quit()
 {
-    cout << "Booting you out.";
+    cout << "Quitting...";
     Sleep(1500);
     exit(0);
 }
@@ -27,27 +22,25 @@ static const Menu_Option selectScreenOptions[] =
     { '1', "1: Quit", Quit},
     { '2', "2: Settings", Settings },
     { '3', "3: Debug\n", DebugWindow },
-    { '4', "4: Addition", AdditionCalc },
-    { '5', "5: Subtraction", SubtractionCalc },
-    { '6', "6: Multiplication", MultiplicationCalc },
-    { '7', "7: Division\n", DivisionCalc },
-    { '8', "8: Algebra Calcs [WIP]", AlgebraSelectScreen },
+    { '4', "4: Calculator\n", Calc },
+    { '5', "5: Algebra Formulas\n", AlgebraSelectScreen },
+    { '6', "6: Gemoetry Formulas", GeometrySelectionScreen },
 };
 
 void SelectScreen()
 {
     /* first selection screen */
     system("cls");
-    cout << "\n\tSelect where you want to go\n\n" << endl;
+    cout << endl << "\tSelect where you want to go" << endl << endl << endl;
     
     static const size_t numSelections = sizeof(selectScreenOptions) / sizeof(selectScreenOptions[0]);
 
     for (size_t i = 0; i < numSelections; ++i)
     {
-        std::cout << selectScreenOptions[i].p_selection_text << "\n";
+        cout << selectScreenOptions[i].p_selection_text << "\n";
     }
 
-    std::cout << "\nEnter selection: ";
+    cout << "\nEnter selection: ";
     char choice = getchar();
 
     for (size_t i = 0; i < numSelections; ++i)
@@ -55,7 +48,6 @@ void SelectScreen()
         if (choice == selectScreenOptions[i].choice)
         {
             Menu_Processing_Function_Pointer p_function = selectScreenOptions[i].p_processing_function;
-            system("cls");
             (p_function)();
             break;
         }

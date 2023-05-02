@@ -8,16 +8,14 @@ extern string LastCalc;
 int main();
 void SelectScreen();
 void AlgebraSelectScreen();
+void GeometrySelectionScreen();
 void DebugWindow();
 
 void Settings();
 void ColorSettings();
+void ResetPassword();
 
-extern bool AdditionActiv;
-extern bool SubtractionActiv;
-extern bool DivisionActiv;
-extern bool MultiplicationActiv;
-
-extern bool AxByActiv;
+extern string ColorSettingFile;
+void ColorWriteToFile();
 
 #endif // SELECT_H_INCLUDE

@@ -4,9 +4,9 @@
 #include <stdlib.h>
 #include <windows.h>
 
-#include "..\Headers\Calc.h"
-#include "..\Headers\Select.h"
-#include "..\Headers\MenuBuilder.h"
+#include "..\..\Headers\Calc.h"
+#include "..\..\Headers\Select.h"
+#include "..\..\Headers\MenuBuilder.h"
 
 using namespace std;
 
@@ -14,10 +14,8 @@ void CustomColorSetting();
 
 void ColorSettings()
 {
-    while (true == true)
-    {
         system("CLS");
-        cout << "\n\tChange Console Color" << endl;
+        cout << endl << "\tChange Console Color" << endl;
         cout << endl;
         cout << "1: Go back" << endl;
         cout << endl;
@@ -29,33 +27,40 @@ void ColorSettings()
         cout << "6: Custom color" << endl;
         cout << endl << endl;
 
-        int opton;
         cout << "Option: ";
-        cin >> opton;
+        char opton = getchar();
 
         switch (opton)
         {
-        case 1:
+        case '1':
             Settings();
             break;
 
-        case 2:
+        case '2':
             system("color f0");
-			break; 
+            ColorSettingFile = "color f0";
+            ColorWriteToFile();
+            break;
 
-        case 3:
+        case '3':
             system("color f7");
+            ColorSettingFile = "color f7";
+            ColorWriteToFile();
             break;
 
-        case 4:
+        case '4':
             system("color 07");
+            ColorSettingFile = "color 07";
+            ColorWriteToFile();
             break;
 
-        case 5:
+        case '5':
             system("color 08");
+            ColorSettingFile = "color 08";
+            ColorWriteToFile();
             break;
 
-        case 6:
+        case '6':
             CustomColorSetting();
             break;
 
@@ -63,6 +68,7 @@ void ColorSettings()
             ColorSettings();
             break;
         }
-    }
+
+        ColorSettings();
     return;
 }

@@ -4,8 +4,8 @@
 #include <stdlib.h>
 #include <windows.h>
 
-#include "..\Headers\Calc.h"
-#include "..\Headers\Select.h"
+#include "..\..\Headers\Calc.h"
+#include "..\..\Headers\Select.h"
 
 using namespace std;
 
@@ -22,14 +22,13 @@ void XY();
 void AxByCalc()
 {
 
-    AxByActiv = 1;
     LastCalc = "Ax+By=C";
 
     /* Ok here is the Ax+By=C calculator */
-    while (AxByActiv)
+    while (true)
     {
         system("CLS");
-		cout << "\n\tAlgebra: Ax+By=C calculator\n\n\n\n" << endl;
+		cout << endl << "\tAx+By=C" << endl << endl << endl << endl << endl;
 
         cout << "Known A: ";
         cin >> A;
@@ -39,7 +38,7 @@ void AxByCalc()
         cout << "Known B: ";
         cin >> B;
 
-        cout << "\n\n\n" << endl;
+        cout << endl << endl << endl << endl;
 
         cout << "Variable X: ";
         cin >> x;
@@ -50,7 +49,7 @@ void AxByCalc()
         cin >> y;
 
         answr = A * x + B * y;
-        cout << "\n\t\tYour answer is: " << answr << endl;
+        cout << endl << "\t\tYour answer is: " << answr << endl;
         Sleep(2000);
 
         cout << endl;
@@ -71,7 +70,6 @@ void AxByCalc()
         }
         else if (CalcQuit == "Y" || CalcQuit == "y")
         {
-            AxByActiv = 0;
             AlgebraSelectScreen();
         }
         else if (CalcQuit == "quit" || CalcQuit == "Quit")
@@ -80,7 +78,6 @@ void AxByCalc()
         }
         else
         {
-            AxByActiv = 0;
             AlgebraSelectScreen();
         }
 

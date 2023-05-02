@@ -11,31 +11,35 @@ using namespace std;
 
 void Settings()
 {
-    while (true == true)
-    {
         system("CLS");
-        cout << "\n\tSettings" << endl;
+        cout << endl << "\tSettings" << endl;
         cout << endl;
         cout << "1: Go back" << endl;
         cout << endl;
         cout << "2: Console color" << endl;
+        cout << "3: Reset password" << endl;
         cout << endl << endl;
 
-        int opton;
         cout << "Option: ";
-        cin >> opton;
+        char opton = getchar();
 
         switch (opton)
         {
-        case 1:
+        case '1':
             SelectScreen();
+            break;
 
-        case 2:
+        case '2':
             ColorSettings();
+            break;
+
+        case '3':
+            ResetPassword();
+            break;
 
         default:
             Settings();
+            break;
         }
-    }
     return;
 }

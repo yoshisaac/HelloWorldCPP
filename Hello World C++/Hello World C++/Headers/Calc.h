@@ -4,18 +4,21 @@
 
 using namespace std;
 
-void AdditionCalc();
-void SubtractionCalc();
-void DivisionCalc();
-void MultiplicationCalc();
+void Calc();
 
 void AxByCalc();
+void ParabCalc();
+
+void AsqrBsqrCalc();
 
 void CalcQuitY();
 
 extern double A, B;
 extern double x, y;
 extern double answr;
+
+extern string theircolor;
+void ApplyCustomColor();
 
 extern string CalcQuit;
 

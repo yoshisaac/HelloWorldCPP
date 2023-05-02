@@ -2,23 +2,24 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Source\AdditionCalc.cpp" />
-    <ClCompile Include="Source\AlgebraCalc AxBy.cpp" />
+    <ClCompile Include="Calculators\Calc.cpp" />
+    <ClCompile Include="Calculators\Algebra\Ax+By\AlgebraCalc AxBy.cpp" />
     <ClCompile Include="Source\AlgebraSelectScreen.cpp" />
-    <ClCompile Include="Source\AxBy Redo.cpp" />
-    <ClCompile Include="Source\ColorSettings.cpp" />
-    <ClCompile Include="Source\CustomColorSetting.cpp" />
+    <ClCompile Include="Calculators\Algebra\Ax+By\AxBy Redo.cpp" />
+    <ClCompile Include="Settings\Custom Colors\ColorSettings.cpp" />
+    <ClCompile Include="Settings\Custom Colors\CustomColorSetting.cpp" />
     <ClCompile Include="Source\DebugWindow.cpp" />
-    <ClCompile Include="Source\DivisionCalc.cpp" />
-    <ClCompile Include="Source\MultiplicationCalc.cpp" />
-    <ClCompile Include="Source\SettingsWindow.cpp" />
+    <ClCompile Include="Settings\SettingsScreen.cpp" />
     <ClCompile Include="Source\StandardSelectScreen.cpp" />
-    <ClCompile Include="Source\SubtractionCalc.cpp" />
-    <ClCompile Include="Source\Navigation\AlgebraSelectScreen.cpp" />
-    <ClCompile Include="Source\Navigation\StandardSelectScreen.cpp" />
+    <ClCompile Include="Source\GeometrySelectionScreen.cpp" />
+    <ClCompile Include="Calculators\Pathagorean.cpp" />
+    <ClCompile Include="Settings\Custom Colors\ColorSettingWriteToFile.cpp" />
+    <ClCompile Include="Settings\Reset Password\Reset Password.cpp" />
+    <ClCompile Include="Calculators\Algebra\Ax^2+Bx+C\Parab Calc.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\Calc.h" />
     <ClInclude Include="Headers\Select.h" />
+    <ClInclude Include="Headers\MenuBuilder.h" />
   </ItemGroup>
 </Project>

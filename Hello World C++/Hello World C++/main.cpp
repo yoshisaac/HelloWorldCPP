@@ -12,33 +12,60 @@
 using namespace std;
 
 string LastCalc;
+string theircolor;
+
+void ApplyCustomColor()
+{
+    //apply the color from the fle we just read
+    ofstream Write;
+    Write.open("color.txt");
+    //Error handling kinda. 
+    //Just set the default color to the file
+    //if their color.txt is empty
+    if (theircolor.empty())
+    {
+        theircolor = "color 07";
+    }
+    Write << theircolor;
+    system(theircolor.c_str());
+    Write.close();
+}
 
 int main()
 {
+    //Set a window title
+    system("title HelloWorldC++");
+
+    //change the color of the screen before anything else!
+    ifstream ReadColorSetting;
+    ReadColorSetting.open("color.txt");
+    getline(ReadColorSetting, theircolor);
+    ReadColorSetting.close();
+
+    ApplyCustomColor();
+    
     //the "trys" variable tracks how many times they failed to input the password
     int trys = 0;
-    string CalcQuit;
 
     LastCalc = "None";
 
-    string passout, passtemp, passinput;
+    string passinput;
     string regPassword;
     string password;
     string line;
 
-    ifstream Read("password.txt");
-    getline(Read, line);
-    password = line;
+    ifstream ReadPassword("password.txt");
+    getline(ReadPassword, password);
 
-    if (line.length() > 0)
+    if (password.length() > 0)
     {
-        while (Read.is_open())
+        while (ReadPassword.is_open())
         {
-            while (trys < 3) // 0 1 2
+            while (trys < 3)
             {
                 // Login screen
                 system("CLS");
-                cout << "\n\tInput the password to enter\n\n\n\n" << flush << endl;
+                cout << endl << "\tInput your password to enter" << endl << endl << endl << endl << endl;
                 cout << "password: ";
                 cin >> passinput;
                 
@@ -59,13 +86,13 @@ int main()
                 }
             }
             
-            Read.close();
+            ReadPassword.close();
             cout << "Too many guesses! Booting you out.";
             Sleep(3500);
-            exit(0);
+            std::exit(0);
         }
 
-        cout << "Unable to open password file" << endl;
+        cout << "Unable to open password.txt!" << endl;
         Sleep(2000);
     }
     else
@@ -75,17 +102,17 @@ int main()
         Plus you would learn something new :p
         ~ Omega
         */
-        ofstream Create;
-        Create.open("password.txt");
-        cout << "\n\tRegister a password" << endl;
+        ofstream CreatePassword;
+        CreatePassword.open("password.txt");
+        cout << endl << "\tRegister a password" << endl;
         cout << endl << endl;
         cout << "Register: ";
         cin >> regPassword;
-        Create << regPassword;
-        Create.close();
+        CreatePassword << regPassword;
+        CreatePassword.close();
 
         cout << endl;
-        cout << "Password saved to 'password.txt'" << endl;
+        cout << "Password saved to 'password.txt' in the same directory" << endl;
         Sleep(3000);
 
         main();

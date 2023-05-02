@@ -4,8 +4,8 @@
 #include <stdlib.h>
 #include <windows.h>
 
-#include "..\Headers\Calc.h"
-#include "..\Headers\Select.h"
+#include "..\..\Headers\Calc.h"
+#include "..\..\Headers\Select.h"
 
 using namespace std;
 
@@ -49,7 +49,6 @@ void XY()
     }
     else if (CalcQuit == "Y" || CalcQuit == "y")
     {
-        AxByActiv = 0;
         AlgebraSelectScreen();
     }
     else if (CalcQuit == "quit" || CalcQuit == "Quit")
@@ -58,7 +57,6 @@ void XY()
     }
     else
     {
-        AxByActiv = 0;
         AlgebraSelectScreen();
     }
 }
@@ -104,7 +102,6 @@ void AB()
     }
     else if (CalcQuit == "Y" || CalcQuit == "y")
     {
-        AxByActiv = 0;
         AlgebraSelectScreen();
     }
     else if (CalcQuit == "quit" || CalcQuit == "Quit")
@@ -113,7 +110,6 @@ void AB()
     }
     else
     {
-        AxByActiv = 0;
         AlgebraSelectScreen();
     }
 }

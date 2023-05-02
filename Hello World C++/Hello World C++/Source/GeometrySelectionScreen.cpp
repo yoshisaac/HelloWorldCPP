@@ -9,7 +9,7 @@
 #include "..\Headers\Select.h"
 #include "..\Headers\Calc.h"
 
-void AlgebraSelectScreen()
+void GeometrySelectionScreen()
 {
     /* algebra select screen*/
     system("CLS");
@@ -17,15 +17,14 @@ void AlgebraSelectScreen()
     cout << "1: Quit" << endl;
     cout << "2: Go back" << endl;;
     cout << endl;
-    cout << "3: Ax+By=C" << endl;
-    cout << "4: Ax^2+Bx+C" << endl;
+    cout << "3: a^2 + b^2" << endl;
     cout << endl << endl;
 
 
     cout << "Option: ";
     char opton = getchar();
 
-	switch (opton) // Nice use of a switch statement good job :thumbs_up: ~ Omega
+    switch (opton)
     {
     case '1':
         cout << "Booting you out.";
@@ -38,15 +37,11 @@ void AlgebraSelectScreen()
         break;
 
     case '3':
-        AxByCalc();
-        break;
-
-    case '4':
-        ParabCalc();
+        AsqrBsqrCalc();
         break;
 
     default:
-        AlgebraSelectScreen();
+        GeometrySelectionScreen();
         break;
     }
     return;
