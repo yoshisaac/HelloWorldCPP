@@ -13,7 +13,7 @@ using namespace std;
 void CalcQuitY()
 {
     cout << "Quitting..." << endl;
-    Sleep(1000);
+    Sleep(500);
     exit(0);
 }
 
@@ -21,6 +21,7 @@ void Calc()
 {
     char CalcQuit;
     double fst, scnd, answr;
+    int fstINT, scndINT;
     char op;
 
     LastCalc = "Calculator";
@@ -31,7 +32,7 @@ void Calc()
         system("CLS");
         /* Tittle */
         cout << endl << "\tCalculator - Usage: # operator another #" << endl;
-        cout << endl << "\tExamples: 1+1, 2*2, 10-2, 9/3" << endl << endl << endl << endl;
+        cout << endl << "\tExamples: 1+1, 2*2, 10-2, 9/3, 10%3, 5=5" << endl << endl << endl << endl;
 
         /* User input */
         cin >> fst >> op >> scnd;
@@ -57,11 +58,18 @@ void Calc()
         case '-':
             answr = fst - scnd;
             break;
+        case '*':
+            answr = fst * scnd;
+            break;
         case '/':
             answr = fst / scnd;
             break;
-        case '*':
-            answr = fst * scnd;
+        case '%':
+            //Type cast the doubles to integers because
+            //the modulo operator only supports integers in c++
+            fstINT = int(fst);
+            scndINT = int(scnd);
+            answr = fstINT % scndINT;
             break;
         case '=':
             answr = fst == scnd;
@@ -103,6 +111,8 @@ void Calc()
             SelectScreen();
             break;
         case 'n':
+            //nothing needs to be here
+            //we are in a while loop
             break;
         case 'q':
             CalcQuitY();
@@ -111,8 +121,6 @@ void Calc()
             SelectScreen();
             break;
         }
-
-        system("CLS");
     }
     return;
 }

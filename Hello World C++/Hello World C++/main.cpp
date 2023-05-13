@@ -112,7 +112,7 @@ int main()
         CreatePassword.close();
 
         cout << endl;
-        cout << "Password saved to 'password.txt' in the same directory" << endl;
+        cout << "Password saved to \"password.txt\" in the same directory" << endl;
         Sleep(3000);
 
         main();

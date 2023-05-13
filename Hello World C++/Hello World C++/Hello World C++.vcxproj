@@ -130,7 +130,7 @@
     <ClCompile Include="Calculators\Algebra\Ax^2+Bx+C\Parab Calc.cpp" />
     <ClCompile Include="Calculators\Calc.cpp" />
     <ClCompile Include="Calculators\Algebra\Ax+By\AlgebraCalc AxBy.cpp" />
-    <ClCompile Include="Calculators\Pathagorean.cpp" />
+    <ClCompile Include="Calculators\Geometry\Pathagorean.cpp" />
     <ClCompile Include="Settings\Reset Password\Reset Password.cpp" />
     <ClCompile Include="Source\AlgebraSelectScreen.cpp" />
     <ClCompile Include="Calculators\Algebra\Ax+By\AxBy Redo.cpp" />

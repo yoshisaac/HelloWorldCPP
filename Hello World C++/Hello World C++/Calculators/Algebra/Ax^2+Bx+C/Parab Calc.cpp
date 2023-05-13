@@ -85,7 +85,5 @@ void ParabCalc()
             SelectScreen();
             break;
         }
-
-        system("CLS");
     }
 }

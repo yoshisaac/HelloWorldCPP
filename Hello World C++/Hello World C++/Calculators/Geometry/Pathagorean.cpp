@@ -7,8 +7,8 @@
 
 #include <cmath>
 
-#include "..\Headers\Calc.h"
-#include "..\Headers\Select.h"
+#include "..\..\Headers\Calc.h"
+#include "..\..\Headers\Select.h"
 
 using namespace std;
 
@@ -75,7 +75,6 @@ void AsqrBsqrCalc()
             GeometrySelectionScreen();
             break;
         }
-        system("CLS");
     }
     return;
 }

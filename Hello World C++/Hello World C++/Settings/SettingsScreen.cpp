@@ -12,8 +12,7 @@ using namespace std;
 void Settings()
 {
         system("CLS");
-        cout << endl << "\tSettings" << endl;
-        cout << endl;
+        cout << endl << "\tSettings" << endl << endl;
         cout << "1: Go back" << endl;
         cout << endl;
         cout << "2: Console color" << endl;

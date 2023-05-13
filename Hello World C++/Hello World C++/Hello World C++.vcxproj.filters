@@ -12,7 +12,7 @@
     <ClCompile Include="Settings\SettingsScreen.cpp" />
     <ClCompile Include="Source\StandardSelectScreen.cpp" />
     <ClCompile Include="Source\GeometrySelectionScreen.cpp" />
-    <ClCompile Include="Calculators\Pathagorean.cpp" />
+    <ClCompile Include="Calculators\Geometry\Pathagorean.cpp" />
     <ClCompile Include="Settings\Custom Colors\ColorSettingWriteToFile.cpp" />
     <ClCompile Include="Settings\Reset Password\Reset Password.cpp" />
     <ClCompile Include="Calculators\Algebra\Ax^2+Bx+C\Parab Calc.cpp" />
