@@ -9,6 +9,8 @@
 
 using namespace std;
 
+// Maybe try using the menu builder? ~ Omega
+
 void Settings()
 {
         system("CLS");

@@ -105,7 +105,7 @@ void Calc()
         }
 
         /* Selection of where to go next */
-        switch (tolower(CalcQuit))
+        switch (tolower(CalcQuit)) // Nice ~ Omega
         {
         case 'y':
             SelectScreen();

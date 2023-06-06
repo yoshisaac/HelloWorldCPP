@@ -37,9 +37,11 @@ void ColorSettings()
             break;
 
         case '2':
+            // Try SetConsoleTextAttribute ~ Omega
             system("color f0");
             ColorSettingFile = "color f0";
             ColorWriteToFile();
+
             break;
 
         case '3':

@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <windows.h>
 
-#include "..\..\Headers\Calc.h"
+#include "..\..\Headers\Calc.h" // Seems like you also forgot to update this file :shrug: ~ Omega
 #include "..\..\Headers\Select.h"
 
 using namespace std;
@@ -74,7 +74,7 @@ void ParabCalc()
         switch (tolower(CalcQuit))
         {
         case 'y':
-            SelectScreen();
+            SelectScreen(); // Different scope who dis? ~ Omega
             break;
         case 'n':
             break;

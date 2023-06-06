@@ -34,7 +34,7 @@ void ApplyCustomColor()
 int main()
 {
     //Set a window title
-    system("title HelloWorldC++");
+    system("title HelloWorldC++"); // SetConsoleTitleA("HelloWorldC++"); ~ Omega
 
     //change the color of the screen before anything else!
     ifstream ReadColorSetting;
@@ -72,7 +72,7 @@ int main()
                 if (passinput == password)
                 {
                     cout << "Correct!";
-                    Sleep(1500);
+                    Sleep(1500); // #include <thread> std::this_thread::sleep_for(std::chrono::milliseconds(1500)); ~ Omega
 
                     // go to the calculator selection screen
                     SelectScreen();
@@ -80,7 +80,7 @@ int main()
                 else
                 {
                     cout << "Wrong!" << endl;
-                    Sleep(1500);
+                    Sleep(1500); // #include <thread> std::this_thread::sleep_for(std::chrono::milliseconds(1500)); ~ Omega
                     //add 1 to the integer every time they fail the password
                     trys++;
                 }
@@ -88,12 +88,12 @@ int main()
             
             ReadPassword.close();
             cout << "Too many guesses! Booting you out.";
-            Sleep(3500);
+            Sleep(3500); // #include <thread> std::this_thread::sleep_for(std::chrono::milliseconds(3500)); ~ Omega
             std::exit(0);
         }
 
         cout << "Unable to open password.txt!" << endl;
-        Sleep(2000);
+        Sleep(2000); // #include <thread> std::this_thread::sleep_for(std::chrono::seconds(2)); ~ Omega
     }
     else
     {
@@ -102,6 +102,7 @@ int main()
         Plus you would learn something new :p
         ~ Omega
         */
+
         ofstream CreatePassword;
         CreatePassword.open("password.txt");
         cout << endl << "\tRegister a password" << endl;
@@ -113,7 +114,7 @@ int main()
 
         cout << endl;
         cout << "Password saved to \"password.txt\" in the same directory" << endl;
-        Sleep(3000);
+        Sleep(3000); // #include <thread> std::this_thread::sleep_for(std::chrono::seconds(3)); ~ Omega
 
         main();
     }

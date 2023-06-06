@@ -47,7 +47,7 @@ void AsqrBsqrCalc()
 
         answr = fst * fst + scnd * scnd;
         cout << "\t\t" << fst << "^2" << " + " << scnd << "^2" << " = " << sqrt(fst * fst + scnd * scnd) << "^2" << " = " << answr << endl;
-        Sleep(2000);
+        Sleep(2000); // #include <thread> std::this_thread::sleep_for(std::chrono::milliseconds(1500)); ~ Omega
 
         cout << "Exit? Y or N" << endl;
         cout << "Or type \"Q\" to close the application\n" << endl;

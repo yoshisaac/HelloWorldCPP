@@ -10,11 +10,13 @@
 
 // Changed to a different menu builder framework made by Omega
 
+// This file is pretty :smile: ~ Omega
+
 void Quit()
 {
     cout << "Quitting...";
-    Sleep(1500);
-    exit(0);
+    Sleep(1500); // #include <thread> std::this_thread::sleep_for(std::chrono::milliseconds(1500)); ~ Omega
+    exit(0); // exit(EXIT_SUCCESS) ~ Omega
 }
 
 static const Menu_Option selectScreenOptions[] =
@@ -52,5 +54,6 @@ void SelectScreen()
             break;
         }
     }
+
     SelectScreen();
 }

@@ -28,8 +28,8 @@ void AlgebraSelectScreen()
 	switch (opton) // Nice use of a switch statement good job :thumbs_up: ~ Omega
     {
     case '1':
-        cout << "Booting you out.";
-        Sleep(1500);
+        cout << "Booting you out."; // Change this string to line up with your other "quits" ~ Omega
+        Sleep(1500); // #include <thread> std::this_thread::sleep_for(std::chrono::milliseconds(1500)); ~ Omega
         exit(0);
         break;
 
