@@ -29,7 +29,7 @@ static const Menu_Option selectScreenOptions[] =
     { '6', "6: Gemoetry Formulas", GeometrySelectionScreen },
 };
 
-void SelectScreen()
+void SelectScreen() // This function is infinitely recursive which will cause a stack overflow after enough loops maybe you can find a way to fix it? ~ Omega
 {
     /* first selection screen */
     system("cls");
@@ -51,7 +51,7 @@ void SelectScreen()
         {
             Menu_Processing_Function_Pointer p_function = selectScreenOptions[i].p_processing_function;
             (p_function)();
-            break;
+            break; // Maybe if you change this to a return? ~ Omega
         }
     }
 

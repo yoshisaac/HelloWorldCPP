@@ -12,7 +12,7 @@ using namespace std;
 
 void CustomColorSetting();
 
-void ColorSettings()
+void ColorSettings() // This function is infinitely recursive which will cause a stack overflow after enough loops maybe you can find a way to fix it? ~ Omega
 {
         system("CLS");
         cout << endl << "\tChange Console Color" << endl;
