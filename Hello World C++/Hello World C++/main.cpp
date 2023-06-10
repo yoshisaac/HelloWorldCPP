@@ -34,7 +34,7 @@ void ApplyCustomColor()
 int main()
 {
     //Set a window title
-    system("title HelloWorldC++"); // SetConsoleTitleA("HelloWorldC++"); ~ Omega
+    SetConsoleTitleA("HelloWorldC++");
 
     //change the color of the screen before anything else!
     ifstream ReadColorSetting;

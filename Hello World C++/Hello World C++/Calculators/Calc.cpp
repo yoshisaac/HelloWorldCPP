@@ -31,13 +31,13 @@ void Calc()
     {
         system("CLS");
         /* Tittle */
-        cout << endl << "\tCalculator - Usage: # operator another #" << endl;
-        cout << endl << "\tExamples: 1+1, 2*2, 10-2, 9/3, 10%3, 5=5" << endl << endl << endl << endl;
+        cout << '\n' << "\tCalculator - Usage: # operator another #" << '\n';
+        cout << '\n' << "\tExamples: 1+1, 2*2, 10-2, 9/3, 10%3, 5=5" << "\n\n\n\n";
 
         /* User input */
         cin >> fst >> op >> scnd;
 
-        cout << endl;
+        cout << '\n';
 
         /* If anything breaks in the iostream then retry */
         if (cin.fail())
@@ -80,20 +80,20 @@ void Calc()
             break;
         }
 
-        cout << endl << endl << endl << endl;
+        cout << "\n\n\n\n";
 
         if (op == 'i')
         {
-            cout << "A invalid operator was used" << endl;
+            cout << "A invalid operator was used" << '\n';
         }
         else
         {
-            cout << "\t\t" << fst << op << scnd << " = " << answr << endl;
+            cout << "\t\t" << fst << op << scnd << " = " << answr << '\n';
         }
         Sleep(2000);
 
-        cout << "Exit? Y or N" << endl;
-        cout << "Or type \"Q\" to close the application" << endl << endl;
+        cout << "Exit? Y or N" << '\n';
+        cout << "Or type \"Q\" to close the application" << "\n";
         cin >> CalcQuit;
 
         /* Be really sure they didn't break anything */
@@ -113,6 +113,7 @@ void Calc()
         case 'n':
             //nothing needs to be here
             //we are in a while loop
+            //just break out of the switch statement
             break;
         case 'q':
             CalcQuitY();

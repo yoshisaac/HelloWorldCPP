@@ -13,13 +13,13 @@ void AlgebraSelectScreen()
 {
     /* algebra select screen*/
     system("CLS");
-    cout << endl << "\tSelect where you want to go" << endl << endl << endl;
-    cout << "1: Quit" << endl;
-    cout << "2: Go back" << endl;;
-    cout << endl;
-    cout << "3: Ax+By=C" << endl;
-    cout << "4: Ax^2+Bx+C" << endl;
-    cout << endl << endl;
+    cout << '\n' << "\tSelect where you want to go" << "\n\n\n";
+    cout << "1: Quit" << '\n';
+    cout << "2: Go back" << '\n';
+    cout << '\n';
+    cout << "3: Ax+By=C" << '\n';
+    cout << "4: Ax^2+Bx+C" << '\n';
+    cout << "\n\n";
 
 
     cout << "Option: ";

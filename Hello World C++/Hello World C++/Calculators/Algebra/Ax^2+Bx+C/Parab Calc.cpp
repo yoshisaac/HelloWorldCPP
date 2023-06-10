@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <conio.h>
 #include <fstream>
 
@@ -14,6 +14,7 @@ void ParabCalc()
 {
     char CalcQuit;
     double A, B, C, AxisOfSym, answr;
+    string MinMax;
 
     LastCalc = "Parab Calculator";
 
@@ -22,18 +23,20 @@ void ParabCalc()
     {
         system("CLS");
         /* Tittle */
-        cout << endl << "\tParabula Formula" << endl << "\t  -B/(2*A) = x" << endl << "\t  y = Ax^2+Bx+C" << endl << endl << endl;
+        cout << '\n' << "\tParabula Formula" << '\n';
+        cout << "\t  -B/(2*A) = x" << '\n';
+        cout << "\t  y = Ax^2+Bx+C" << "\n\n\n";
 
         /* User input */
         cout << "A value: ";
         cin >> A;
 
-        cout << endl;
+        cout << '\n';
 
         cout << "B value: ";
         cin >> B;
 
-        cout << endl;
+        cout << '\n';
         
         cout << "C value: ";
         cin >> C;
@@ -45,21 +48,36 @@ void ParabCalc()
             cin.ignore();
             ParabCalc();
         }
-       
-        cout << endl;
+
+        cout << '\n';
 
         AxisOfSym = -B / (2 * A);
+        if (abs(AxisOfSym) == 0)
+        {
+            AxisOfSym = 0;
+        }
+        cout << "Axis Of Symetry: -" << B << "/(2*" << A << ") = " << AxisOfSym << " = x" << '\n';
+
         answr = A * (AxisOfSym * AxisOfSym) + B * AxisOfSym + C;
+        cout << "Vertex: " << A << "*X^2 + " << B << "*X + " << C << " = " << AxisOfSym << "," << answr << '\n';
 
-        cout << "Axis Of Symetry: -" << B << "/" << "(" << "2" << "*" << A << ")" << " = " << AxisOfSym << " = x" << endl;
+        cout << "Y-intercept: 0," << C << '\n';
+        
+        if (answr < C)
+        {
+            MinMax = "Min";
+        }
+        else if (answr > C)
+        {
+            MinMax = "Max";
+        }
+        cout << "min/max: " << MinMax << "  " << answr << '\n';
 
-        cout << "Vertex: " << A << "*X^2" << " + " << B << "*X + " << C << " = " << AxisOfSym << "," << answr << endl;
-
-        cout << "Y-intercept: " << C << endl << endl;
+        cout << "Range: " << answr << " - infinity" << "\n\n";
         Sleep(2000);
 
         cout << "Exit? Y or N" << endl;
-        cout << "Or type \"Q\" to close the application" << endl << endl;
+        cout << "Or type \"Q\" to close the application" << "\n\n";
         cin >> CalcQuit;
 
         /* Be really sure they didn't break anything */
