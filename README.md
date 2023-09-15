@@ -1,7 +1,7 @@
 # HelloWorld C++
 Basic-ish console application writen in c++ 
  
-It currently has a password that you register to a file, basic calculators, with some for Algebra formulas and Geometry formulas, a "Debug" screen, and finally a Settings menu with an option to change the color of the console and reset your password, .
+It currently has a password that you register to a file, basic calculators, with some for Algebra formulas and Geometry formulas, a "Debug" screen, and finally a Settings menu with an option to change the color of the console and reset your password.
 
 # Tools I use
 The IDE I use is Visual Studio Community Edition. This project started on Code::Blocks.
